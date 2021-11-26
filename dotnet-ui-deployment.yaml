@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pipeline-dotnet-sample
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: pipeline-dotnet-sample
+  template:
+    metadata:
+      labels:
+        app: pipeline-dotnet-sample
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/dojo-adachi/pipeline-dotnet-sample@sha256:4bdf72bad31be115f7048cbce0034a4089a8c0992fd249f2a8c9543526ddf791
+        name: pipeline-dotnet-sample
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
