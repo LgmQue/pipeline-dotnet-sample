@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: pipeline-dotnet-sample
-  namespace: dojo-adachi
+  namespace: dojo-adachi2
 spec:
   ports:
     - name: 8080-tcp

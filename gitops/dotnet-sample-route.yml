@@ -4,7 +4,7 @@ metadata:
   labels:
     app: pipeline-dotnet-sample
   name: pipeline-dotnet-sample
-  namespace: dojo-adachi
+  namespace: dojo-adachi2
 spec:
   to:
     kind: Service

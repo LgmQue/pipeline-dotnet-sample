@@ -1,1 +1,1 @@
-oc policy add-role-to-user system:image-puller system:serviceaccount:dojo:default --namespace=dojo-adachi
+oc policy add-role-to-user system:image-puller system:serviceaccount:dojo:default --namespace=dojo-adachi2
