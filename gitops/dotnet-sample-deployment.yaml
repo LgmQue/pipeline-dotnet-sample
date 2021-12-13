@@ -5,7 +5,7 @@ metadata:
   name: pipeline-dotnet-sample
   namespace: dojo-adachi2
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: pipeline-dotnet-sample
@@ -18,7 +18,7 @@ spec:
       containers:
         - name: pipeline-dotnet-sample
           image: >-
-            image-registry.openshift-image-registry.svc:5000/dojo-adachi2/pipeline-dotnet-sample-git
+            image-registry.openshift-image-registry.svc:5000/dojo-adachi2/pipeline-dotnet-sample-git@sha256:5e3e20fdab82b876158750f99c76ad6d7988eaca33cf90821f32a57084dff6fe
           ports:
             - containerPort: 8080
               protocol: TCP
